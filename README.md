@@ -11,9 +11,9 @@ Here’s how to add timeouts for popular Go packages. **[All have been tested](t
 Standard library
 
 - [net](#net)
-- [net/http](#net-http)
-- [net/smtp](#net-smtp)
-- [os/exec](#os-exec)
+- [net/http](#nethttp)
+- [net/smtp](#netsmtp)
+- [os/exec](#osexec)
 
 github.com
 
