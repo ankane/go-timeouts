@@ -27,6 +27,10 @@ github.com
 - [go-sql-driver/mysql](#go-sql-drivermysql)
 - [opensearch-project/opensearch-go](#opensearch-projectopensearch-go)
 
+Other
+
+- [go.mongodb.org/mongo-driver/mongo](#go-mongodb-orgmongo-drivermongo)
+
 ## Standard Library
 
 ### net
@@ -165,6 +169,16 @@ cfg := opensearch.Config{
     },
 }
 client, err := opensearch.NewClient(cfg)
+```
+
+## Other
+
+### go.mongodb.org/mongo-driver/mongo
+
+```go
+ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+defer cancel()
+client, err := mongo.Connect(ctx, options.Client().ApplyURI(uri))
 ```
 
 ## Don’t see a library you use?
