@@ -29,7 +29,7 @@ github.com
 
 Other
 
-- [go.mongodb.org/mongo-driver/mongo](#go-mongodb-orgmongo-drivermongo)
+- [go.mongodb.org/mongo-driver/mongo](#gomongodborgmongo-drivermongo)
 
 ## Standard Library
 
