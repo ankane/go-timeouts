@@ -21,6 +21,7 @@ github.com
 - [aws/aws-sdk-go-v2](#awsaws-sdk-go-v2)
 - [bradfitz/gomemcache](#bradfitzgomemcache)
 - [elastic/go-elasticsearch](#elasticgo-elasticsearch)
+- [emersion/go-smtp](#emersiongo-smtp)
 - [go-pg/pg](#go-pgpg)
 - [go-redis/redis](#go-redisredis)
 - [go-sql-driver/mysql](#go-sql-drivermysql)
@@ -105,6 +106,20 @@ cfg := elasticsearch.Config{
     },
 }
 es, err := elasticsearch.NewClient(cfg)
+```
+
+### emersion/go-smtp
+
+```go
+conn, err := net.DialTimeout("tcp", address, time.Second)
+if err != nil {
+    // handle error
+}
+err = conn.SetDeadline(time.Now().Add(time.Second))
+if err != nil {
+    // handle error
+}
+client, err = smtp.NewClient(conn, host)
 ```
 
 ### go-pg/pg
