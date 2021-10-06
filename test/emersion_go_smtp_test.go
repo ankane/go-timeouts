@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"net"
 	"github.com/emersion/go-smtp"
+	"net"
 )
 
 func TestEmersionGoSmtpConnect(t *testing.T) {
