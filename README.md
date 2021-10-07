@@ -22,6 +22,7 @@ github.com
 - [bradfitz/gomemcache](#bradfitzgomemcache)
 - [elastic/go-elasticsearch](#elasticgo-elasticsearch)
 - [emersion/go-smtp](#emersiongo-smtp)
+- [gocql/gocql](#gocql/gocql)
 - [go-pg/pg](#go-pgpg)
 - [go-redis/redis](#go-redisredis)
 - [go-sql-driver/mysql](#go-sql-drivermysql)
@@ -125,6 +126,16 @@ if err != nil {
 }
 client, err = smtp.NewClient(conn, host)
 ```
+
+### gocql/gocql
+
+```go
+cluster := gocql.NewCluster(host)
+cluster.ConnectTimeout = time.Second
+cluster.Timeout = time.Second
+```
+
+Default: 600ms connect timeout, 600ms read timeout
 
 ### go-pg/pg
 
