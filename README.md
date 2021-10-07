@@ -22,7 +22,7 @@ github.com
 - [bradfitz/gomemcache](#bradfitzgomemcache)
 - [elastic/go-elasticsearch](#elasticgo-elasticsearch)
 - [emersion/go-smtp](#emersiongo-smtp)
-- [gocql/gocql](#gocql/gocql)
+- [gocql/gocql](#gocqlgocql)
 - [go-pg/pg](#go-pgpg)
 - [go-redis/redis](#go-redisredis)
 - [go-sql-driver/mysql](#go-sql-drivermysql)
