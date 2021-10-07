@@ -20,6 +20,7 @@ github.com
 - [aws/aws-sdk-go](#awsaws-sdk-go)
 - [aws/aws-sdk-go-v2](#awsaws-sdk-go-v2)
 - [bradfitz/gomemcache](#bradfitzgomemcache)
+- [couchbase/gocb](#couchbasegocb)
 - [elastic/go-elasticsearch](#elasticgo-elasticsearch)
 - [emersion/go-smtp](#emersiongo-smtp)
 - [gocql/gocql](#gocqlgocql)
@@ -98,6 +99,24 @@ cfg, err := config.LoadDefaultConfig(context.TODO(),
 mc := memcache.New(host)
 mc.Timeout = time.Second
 ```
+
+### couchbase/gocb
+
+```go
+cluster, err := gocb.Connect(connStr, gocb.ClusterOptions{
+    TimeoutsConfig: gocb.TimeoutsConfig{
+        ConnectTimeout:    time.Second,
+        KVTimeout:         time.Second,
+        ViewTimeout:       time.Second,
+        QueryTimeout:      time.Second,
+        AnalyticsTimeout:  time.Second,
+        SearchTimeout:     time.Second,
+        ManagementTimeout: time.Second,
+    },
+})
+```
+
+See [the docs](https://docs.couchbase.com/go-sdk/current/ref/client-settings.html#timeout-options) for defaults
 
 ### elastic/go-elasticsearch
 
