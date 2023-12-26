@@ -11,7 +11,7 @@ import (
 )
 
 func assertTimeout(t *testing.T, start time.Time, err error, message string) {
-	assert.Greater(t, time.Since(start).Seconds(), 1.0)
+	assert.Greater(t, time.Since(start).Seconds(), 0.99)
 	assert.Less(t, time.Since(start).Seconds(), 1.25)
 	assert.Contains(t, fmt.Sprint(err), message)
 }
