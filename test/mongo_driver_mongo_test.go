@@ -15,6 +15,9 @@ func TestMongoDriverMongoConnect(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://"+ConnectHostAndPort()))
+	if err != nil {
+		panic(err)
+	}
 
 	start := time.Now()
 	err = client.Ping(ctx, nil)
@@ -27,6 +30,9 @@ func TestMongoDriverMongoRead(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://"+ReadHostAndPort()))
+	if err != nil {
+		panic(err)
+	}
 
 	start := time.Now()
 	err = client.Ping(ctx, nil)

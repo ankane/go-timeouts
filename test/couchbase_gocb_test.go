@@ -17,6 +17,9 @@ func TestCouchbaseGocbKV(t *testing.T) {
 			KVTimeout: time.Second,
 		},
 	})
+	if err != nil {
+		panic(err)
+	}
 	collection := cluster.Bucket("bucket").Collection("collection")
 
 	start := time.Now()
@@ -32,6 +35,9 @@ func TestCouchbaseGocbQuery(t *testing.T) {
 			QueryTimeout: time.Second,
 		},
 	})
+	if err != nil {
+		panic(err)
+	}
 
 	start := time.Now()
 	_, err = cluster.Query("SELECT 1", &gocb.QueryOptions{})
@@ -46,6 +52,9 @@ func TestCouchbaseGocbManagement(t *testing.T) {
 			ManagementTimeout: time.Second,
 		},
 	})
+	if err != nil {
+		panic(err)
+	}
 
 	start := time.Now()
 	_, err = cluster.Buckets().GetBucket("bucket", &gocb.GetBucketOptions{})
