@@ -1,6 +1,6 @@
 module github.com/ankane/go-timeouts
 
-go 1.22
+go 1.24
 
 require (
 	github.com/aws/aws-sdk-go v1.40.54
